@@ -7,8 +7,8 @@ echo "Installing prerequisites for Python ${PYTHON_VERSION} installation"
 sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com 8B48AD6246925553
 sudo apt-key adv --recv-key --keyserver keyserver.ubuntu.com 7638D0442B90D010
 
-sudo echo 'deb http://archive.debian.org/debian jessie-backports main contrib non-free' >> /etc/apt/sources.list.d/backports.list
-sudo echo 'Acquire::Check-Valid-Until "false";' >> /etc/apt/apt.conf.d/01allowexpired
+sudo sh -c 'echo deb http://archive.debian.org/debian jessie-backports main contrib non-free >> /etc/apt/sources.list.d/backports.list'
+sudo sh -c 'echo Acquire::Check-Valid-Until \"false\"\; >> /etc/apt/apt.conf.d/01allowexpired'
 
 sudo apt update
 sudo apt-get install -y make build-essential zlib1g-dev \
