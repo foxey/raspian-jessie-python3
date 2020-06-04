@@ -3,7 +3,7 @@ Install script for python3 on a Jessie based Raspian distribution
 
 ## Usage
 
-Using `pyenv`:
+Using [`pyenv`](https://github.com/pyenv):
 * `bash install.sh`
 
 Using manual build from sources:
